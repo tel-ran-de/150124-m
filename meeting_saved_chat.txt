@@ -1,0 +1,150 @@
+09:37:57 From Starta Institute 36 to Everyone:
+	https://www.guru99.com/images/3/pattern-programs-in-java-3.png
+09:51:50 From Sergei Strukov to Everyone:
+	Reacted to "{6439B14D-5064-421A-BA2F-3FABEA0E1341}.png" with 👍
+09:54:44 From Artem Jantschenko to Everyone:
+	public static void main(String[] args) {	    int lengOfFigur = 6;	    int value = lengOfFigur ;	    for (int i = 0; i < lengOfFigur; i++) {	        for (int j = 0; j < value; j++) {	            System.out.print(" ");	        }	        value--;	        for (int k = 0; k < (2 * i) - 1; k++) {	            System.out.print("*");	        }	        System.out.println();	    }	    value = 0;	    for (int i = 0; i < lengOfFigur; i++) {	        for (int j = 0; j < value; j++) {	            System.out.print(" ");	        }	        value++;	        for (int k = 0; k < 2*(lengOfFigur-i)-1; k++) {	            System.out.print("*");	        }	        System.out.println();	    }	}
+09:55:02 From Liubomyr Shmalii to Everyone:
+	Reacted to "public static void m..." with 👍
+09:55:03 From Ramiz Alasgarov to Everyone:
+	int lenghtOfRomb = 6;	        int value = lenghtOfRomb;	        for (int i = 0; i < lenghtOfRomb; i++) {	            for (int j = 0; j < value; j++) {	                System.out.print(" ");	            }	            value--;	            for (int k = 0; k < (2*i)-1; k++) {	                System.out.print("*");	            }	            System.out.println();	        }	            value = 0;	        for (int i = 0; i < lenghtOfRomb; i++) {	            for (int j = 0; j < value; j++) {	                System.out.print(" ");	            }	            value++;	            for (int k = 0; k < 2*(lenghtOfRomb-i) -1; k++) {	                System.out.print("*");	            }	            System.out.println(" ");	        }
+09:55:19 From Liubomyr Shmalii to Everyone:
+	Reacted to "int lenghtOfRomb = 6..." with 👍
+10:20:56 From Starta Institute 36 to Everyone:
+	int[] array = new int[10];
+	        for (int i = 0; i < array.length; i++) {
+	            array[i] = i + 1;
+	        }
+	//        System.out.println(Arrays.toString(array));
+	        for (int i = 0; i < array.length; i++) {
+	            System.out.print(array[i] + " ");
+	        }
+	        System.out.println("Length of array = " + array.length);
+	        System.out.println("\n-----------------------");
+	//        boolean[] arrayBool = new boolean[10];
+	//        System.out.println(Arrays.toString(arrayBool));
+	//        String[] arrayObj = new String[10];
+	//        System.out.println(Arrays.toString(arrayObj));
+	        int[] array2 = {1, 2, 3, 4, 5};
+	        System.out.println(Arrays.toString(array2));
+	//        array2[5] = 10;
+	        System.out.println("array[0] = " + array2[0]);
+	//        System.out.println("----------------------");
+	//        System.out.printf("Hello %d!%n", 10);
+	//        https://www.baeldung.com/java-printstream-printf
+10:50:17 From Starta Institute 36 to Everyone:
+	int row = 5;
+	        int col = 5;
+	//        int deep = 5;
+	        int[][] matrix = new int[row][col];
+	//        for (int i = 0; i < row; i++) {
+	//            System.out.println(Arrays.toString(matrix[i]));
+	//        }
+	        Random rand = new Random();
+	        for (int i = 0; i < matrix.length; i++) {
+	            for (int j = 0; j < matrix[0].length; j++) {
+	                matrix[i][j] = rand.nextInt(100);
+	            }
+	        }
+	//        System.out.println(Arrays.toString(matrix[4]));
+	
+	        for (int i = 0; i < row; i++) {
+	            for (int j = 0; j < col; j++) {
+	                System.out.print(matrix[i][j] + "\t");
+	            }
+	            System.out.println();
+	        }
+	        System.out.println("------------------");
+	        for (int i = 0; i < col; i++) {
+	            for (int j = 0; j < row; j++) {
+	                System.out.print(matrix[j][i] + "\t");
+	            }
+	            System.out.println();
+	        }
+10:56:24 From Starta Institute 36 to Everyone:
+	nt [][] arr = {{1, 2, 3},{4, 5}, {6, 7, 8, 9}};
+	        int row = arr.length;
+	//        int col = arr[0].length;
+	        for (int i = 0; i < row; i++) {
+	            for (int j = 0; j < arr[i].length; j++) {
+	                System.out.print(arr[i][j] + " ");
+	            }
+	            System.out.println();
+	        }
+10:57:22 From Esmira Abdullayeva to Everyone:
+	Jagged array
+11:43:04 From Artem Jantschenko to Everyone:
+	int h = 5;	int a = 0;	int b = h;	int c = h;	for (int i = 0; i <= h; i++) {	    for (int j = 0; j <= h*2; j++) {	        if(j>9){	            break;	        }	        if (i == a && j == b || i == a && j == c || i == h && j <= h+2) {	            System.out.print(" * ");	        }else {	            System.out.print("  ");	        }	    }	    a++;	    b--;	    c++;	    System.out.println();	}
+11:43:29 From Sergei Strukov to Everyone:
+	Reacted to "int h = 5;
+	int a = 0..." with 👍
+11:46:10 From Anna Kanivets to Everyone:
+	-
+11:46:10 From Ekaterina Beidel to Everyone:
+	+
+11:46:11 From Vyacheslav Vovkozubov to Everyone:
+	+
+11:46:13 From Ramiz Alasgarov to Everyone:
+	+
+11:46:14 From Maria Beljawski to Everyone:
+	-+
+11:46:16 From Sergei Strukov to Everyone:
+	+
+11:46:17 From Artur Zelev to Everyone:
+	-+
+11:46:38 From Inna Degtiarova to Everyone:
+	+
+11:46:39 From Esmira Abdullayeva to Everyone:
+	-+
+11:46:41 From Vadzim Kachmarou to Everyone:
+	-+
+11:54:15 From Vyacheslav Vovkozubov to Everyone:
+	👍
+11:58:34 From Starta Institute 36 to Everyone:
+	1. Создайте 2 массива из 5 случайных целых чисел из отрезка [0;5] каждый
+	
+	2. Выведите массивы на экран в двух отдельных строках
+	
+	3. Посчитайте среднее арифметическое элементов каждого массива
+12:03:41 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	Random random = new Random() ;	        int[] array = new int[5];	        for (int i = 0; i < array.length; i++) {	            array[i] = random.nextInt();	        }	        int value = 0;	        for (int i = 0; i < array.length; i++) {	            value += array[i];	        }	        value = value /5;	        System.out.println(value);
+12:04:39 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	int[] array2 = new int[5];	        for (int i = 0; i < array2.length; i++) {	            array2[i] = random.nextInt();	        }	        int value2 = 0;	        for (int i = 0; i < array.length; i++) {	            value2 += array[i];	        }	        value2 = value2 /5;	        System.out.println(value2);
+12:04:48 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	2 nd array
+12:06:23 From Esmira Abdullayeva to Starta Institute 36(Direct Message):
+	int [] array1 = createRandomArray(5);
+	        int [] array2 =
+12:06:28 From Sergei Strukov to Starta Institute 36(Direct Message):
+	public static void main(String[] args) {	        Random random = new Random();	        int medium = 0;	        int [] array = {random.nextInt(5), random.nextInt(5), random.nextInt(5), random.nextInt(5), random.nextInt(5)};	        for (int i = 0; i < 5; i++) {	            System.out.println(array[i]);	            medium+=array[i];	        }	        System.out.println(medium/5);	    }	}
+12:08:58 From Maria Beljawski to Starta Institute 36(Direct Message):
+	public class RandomArray {	    //1. Создайте 2 массива из 5 случайных целых чисел из отрезка [0;5] каждый	    //2. Выведите массивы на экран в двух отдельных строках	    //3. Посчитайте среднее арифметическое элементов каждого массива	    public static void main(String[] args) {	        int [] array1 = new int[5];	        int [] array2 = new int[5];	        Random random = new Random();	        for (int j = 0; j < array2.length; j++) {	            array1[j] = random.nextInt(5);	        }	        for (int i = 0; i < array1.length; i++) {	            array1[i] = random.nextInt(5);	        }	        System.out.println(Arrays.toString(array1));	        System.out.println(Arrays.toString(array2));		    }	}
+12:14:26 From Sergei Strukov to Starta Institute 36(Direct Message):
+	Random random = new Random();	    int medium = 0;	    int medium2 = 0;	    int [] array1 = {random.nextInt(5), random.nextInt(5), random.nextInt(5), random.nextInt(5), random.nextInt(5)};	    int [] array2 = {random.nextInt(5), random.nextInt(5), random.nextInt(5), random.nextInt(5), random.nextInt(5)};	    for (int i = 0; i < 5; i++) {	        System.out.print(array1[i] +"\t");	        medium+=array1[i];	    }	    System.out.println(" ");	    for (int i = 0; i < 5; i++) {	        System.out.print(array2[i] +"\t");	        medium2+=array2[i];	    }	    System.out.println(" ");	    System.out.println(medium/5 + "Среднее арифметическое первого массива");	    System.out.println(medium2/5 + "Среднее арифметическое второго массива");	}
+12:27:48 From Esmira Abdullayeva to Everyone:
+	int [] array1 = new int [5]; // 
+	       int [] array2 = new int[5];
+	        Random random = new Random();      
+	   int sumArray1 = 0; 
+	        int sumArray2 = 0;
+	for (int i = 0; i < array1.length; i++) {
+	            array1[i] = random.nextInt(6); 
+	            array2[i] = random.nextInt(6);
+	        }
+	        System.out.println(Arrays.toString(array1));
+	        System.out.println(Arrays.toString(array2));
+	for (int i = 0; i < array2.length; i++) { 
+	            sumArray1 += array1[i];
+	            sumArray2 += array2[i];
+	}
+	        System.out.println("Avg of array1 = " + sumArray1 / array1.length ); 
+	        System.out.println("Avg of array2 = " + sumArray2 / array2.length );
+12:32:20 From Starta Institute 36 to Everyone:
+	1. Создайте 2х мерный массива из 5 случайных целых чисел 
+	
+	2. Выведите массив на экран
+	3. Посчитайте сумму элементов каждой строки
+12:35:13 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	Random random = new Random();	        int result =0;	     int[][] array = new int[3][3];	        for (int i = 0; i < array.length; i++) {	            for (int j = 0; j < array[0].length; j++) {	                array[i][j] = random.nextInt(10);	            }	            System.out.println(Arrays.deepToString(array));		        }	        for (int i = 0; i < array.length; i++) {	            for (int j = 0; j < array[0].length; j++) {	                 result +=array[j][i]; 	            }	            System.out.println(result);	        }
+12:48:14 From Hanna Krzheminska to Everyone:
+	int r = 5;	int c = 6;	int summRow=0;	int[][] array = new int[r][c];	Random random = new Random();	for (int i = 0; i <r ; i++) {	    for (int j = 0; j < c; j++) {	        array[i][j]=random.nextInt(10);	    }		}	for (int i = 0; i < r; i++) {	    System.out.println(Arrays.toString(array[i]));	}	for (int i = 0; i < r; i++) {	    for (int j = 0; j < c; j++) {	        summRow+=array[i][j];	    }	    System.out.println(summRow);	    summRow=0;	}
