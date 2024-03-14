@@ -1,119 +1,125 @@
-10:25:26 From Starta Institute 36 to Everyone:
-	public static int lSearch(int[] arr, int findEl) {
-	        for (int i = 0; i < arr.length; i++) {
-	            if (arr[i] == findEl) {
-	                return i;
-	            }
-	        }
-	        return -1;
-	    }
-10:25:38 From Starta Institute 36 to Everyone:
-	Random rand = new Random();
-	        int arrLen = 10;
-	        int findEl = 0;
-	        int[] arr = new int[arrLen];
-	        for (int i = 0; i < arrLen; i++) {
-	            arr[i] = rand.nextInt(21) - 10;
-	        }
-	        System.out.println("findEl = " + findEl);
-	        System.out.println(Arrays.toString(arr));
+09:52:47 From Starta Institute 36 to Everyone:
+	String s1 = "Java";
+	        String s2 = "Java";
+	        String s3 = new String("Java");
 	
-	        int res = lSearch(arr, findEl);
-	        if (res > -1) {
-	            System.out.println(findEl + " has index " + res);
+	        System.out.println(s1 == s2);
+	        System.out.println(s1 == s3);
+	        System.out.println(s2 == s3);
+	
+	        System.out.println(Objects.equals(s1, s2));
+	        System.out.println(Objects.equals(s1,s3));
+	        System.out.println(Objects.equals(s2,s3));
+10:03:00 From Starta Institute 36 to Everyone:
+	Создайте StringBuilder объекты используя все предоставленные конструкторы
+	Используя метод append добавьте к объекту, который создан при помощи конструктора без параметров, строку “StartaUniversity”
+	Распечатайте все объекты на консоле
+	Примените метод reverse() к любому созданному объекту
+	Распечатайте объект на консоле
+10:09:24 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	StringBuilder stringBuilder = new StringBuilder("ramiz");	        StringBuilder stringBuilder1 = new StringBuilder(3);	        stringBuilder.append(" StartaUniversity");	        stringBuilder.reverse();	        System.out.println(stringBuilder);
+10:10:58 From Starta Institute 36 to Ramiz Alasgarov(Direct Message):
+	/        StringBuilder()
+	//        Создает экземпляр без символов и начальной емкостью 16 символов.
+	//                StringBuilder(int capacity)
+	//        Создает экземпляр без символов и начальной емкости, заданной аргументом capacity.
+	//        StringBuilder(CharSequence seq)
+	//        Создает экземпляр, содержащий те же символы, что и указанный CharSequence.
+	//                StringBuilder(String str)
+	//        Создает экземпляр, инициализированный содержимым указанной строки.
+10:11:51 From Starta Institute 36 to Everyone:
+	/        StringBuilder()
+	//        Создает экземпляр без символов и начальной емкостью 16 символов.
+	//                StringBuilder(int capacity)
+	//        Создает экземпляр без символов и начальной емкости, заданной аргументом capacity.
+	//        StringBuilder(CharSequence seq)
+	//        Создает экземпляр, содержащий те же символы, что и указанный CharSequence.
+	//                StringBuilder(String str)
+	//        Создает экземпляр, инициализированный содержимым указанной строки.
+10:13:23 From Roman Fedyniak to Everyone:
+	String.toCharArray()
+10:13:31 From Roman Fedyniak to Everyone:
+	МЫ ПРОХОДИЛИ ЭТОТ МЕТОД?
+10:13:35 From Roman Fedyniak to Everyone:
+	ВСПОМНИТ КТО ТО7
+10:13:46 From Roman Fedyniak to Everyone:
+	они похожи с этим методом?
+10:13:55 From Roman Fedyniak to Everyone:
+	StringBuilder
+10:36:12 From Starta Institute 36 to Everyone:
+	StringBuilder sb1 = new StringBuilder();
+	        StringBuilder sb2 = new StringBuilder(25);
+	
+	        sb1.append("HelloHelloHelloHello");
+	        sb2.append("HelloHelloHelloHelloHelloHello");
+	//        sb2.append("Java");
+	//        sb2.append("2025");
+	//        sb2.append("!!!");
+	
+	        System.out.println(sb1.capacity());
+	        System.out.println(sb2.capacity());
+	        System.out.println(sb1.length());
+	        System.out.println(sb2.length());
+	        System.out.println(sb1);
+	        System.out.println(sb2);
+10:56:51 From Starta Institute 36 to Everyone:
+	append() - метод добавляет строковое представление к последовательности.
+	insert() - метод вставляет строковое представление в эту последовательность.
+	replace(int start, int end, String str) - метод заменяет символы в подстроке этой последовательности символами в указанной строке String.
+	int capacity() - метод возвращает текущую емкость.
+	delete(int start, int end) - метод удаляет символы в подстроке этой последовательности.
+	int indexOf() - метод возвращает индекс в этой строке первого вхождения указанной подстроки.
+	int length() - метод возвращает длину (количество символов).
+	reverse() - метод приводит к замене этой последовательности символов обратной последовательностью.
+	substring() - метод возвращает новый объект String, содержащий подпоследовательность символов, содержащихся в данный момент в этой последовательности символов.
+	toString() - метод возвращает строку, представляющую данные в этой последовательности.
+11:06:45 From Starta Institute 36 to Everyone:
+	An empty StringBuffer class contains the default 16 character capacity. If the number of the character increases from its current capacity, it increases the capacity by (oldcapacity*2)+2.
+11:11:07 From Starta Institute 36 to Everyone:
+	https://www.baeldung.com/java-strings-maximum-length
+11:38:12 From Starta Institute 36 to Everyone:
+	public class Worker {
+	    private String name;
+	    private int age;
+	    private int id;
+	    private double salary;
+	    private static final int DEFAULT_ID = 100;
+	
+	    public Worker() {
+	        this.id += DEFAULT_ID;
+	    }
+11:38:21 From Starta Institute 36 to Everyone:
+	public Worker(String name, int age, double salary) {
+	        this.name = name;
+	        if (age < 18 || age > 65) {
+	            System.out.println("ERROR!!! Incorrect age!");
 	        } else {
-	            System.out.println(findEl + " not found in the array");
+	            this.age = age;
 	        }
-10:35:15 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
-	public static int lSearch(int[] arr, int findEl) {	        for (int i = arr.length; i > 0; i--) {	            if (arr[i] == findEl) {	                return i;	            }	        }	        return -1;	    }
-10:37:12 From Ekaterina Beidel to Starta Institute 36(Direct Message):
-	public static int lSearchReverse(int[] arr, int findEl) {	    for (int i = arr.length ; i > 0 ; i--) {	        if (arr[i] == findEl) {	            return i;	        }	    }	    return -1;	}
-10:39:36 From Sergei Strukov to Starta Institute 36(Direct Message):
-	public static int lSearch(int[] arr, int findEl) {	    for (int i = arr.length-1; i > 0 ; i--) {	        if (arr[i] == findEl) {	            return i;	        }	    }
-10:43:35 From Esmira Abdullayeva to Starta Institute 36(Direct Message):
-	public static int lSearch(int[] arr, int findEl) {
-	      for (int i = 0; i < arr.length; i++) {
-	            if (arr[arr.length - i - 1] == findEl) { 
-	               return i;
-	       }
-	}
-	return -1;
-10:44:36 From Starta Institute 36 to Everyone:
-	public static int lSearch(int[] arr, int findEl) {
-	    for (int i = arr.length-1; i > 0 ; i--) {
-	        if (arr[i] == findEl) {
-	            return i;
-	        }
+	        this.id += DEFAULT_ID;
+	        this.salary = salary;
 	    }
-10:45:39 From Starta Institute 36 to Everyone:
-	public static int lSearch(int[] arr, int findEl) {
-	    for (int i = arr.length-1; i > 0 ; i--) {
-	        if (arr[i] == findEl) {
-	            return i;
-	        }
-	    } return -1; }
-10:47:07 From Maria Beljawski to Starta Institute 36(Direct Message):
-	public static int rSearch(int[] arr, int findEl) {	        for (int i = ARR_LEN - 1; i >= 0; i--) {	            if (arr[i] == findEl) {	                return i;	            }	        }	        return -1;	    }	    }
-10:50:33 From Ekaterina Beidel to Starta Institute 36(Direct Message):
-	Не видно презентации
-10:53:51 From Starta Institute 36 to Everyone:
-	Двоичный (бинарный) поиск (также известен как метод деления пополам или дихотомия) — классический алгоритм поиска элемента в отсортированном массиве (векторе), использующий дробление массива на половины. Используется в информатике, вычислительной математике и математическом программировании.
-11:49:06 From Ekaterina Beidel to Everyone:
-	public class BinarySearchRecursion {	    public static void main(String[] args) {	        Random random = new Random();	        int arrayLength = 10;	        int[] array = new int[arrayLength];	        for (int i = 0; i < arrayLength; i++) {	            array[i] = random.nextInt(11);	        }	        int findElement = 5;	        Arrays.sort(array);	        System.out.println(Arrays.toString(array));	        System.out.println(findElement + " has index " + recursiveBS(array, 0, arrayLength - 1, findElement));	    }
-11:49:15 From Ekaterina Beidel to Everyone:
-	public static int recursiveBS(int[] array, int firstIdx, int lastIdx, int findElement) {	    if (lastIdx >= firstIdx) {	        int midIdx = firstIdx + (lastIdx - firstIdx) / 2;	        if (array[midIdx] == findElement) {	            return midIdx;	        }	        if (array[midIdx] > findElement) {	            return recursiveBS(array, firstIdx, midIdx - 1, findElement);	        }	        return recursiveBS(array, midIdx + 1, lastIdx, findElement);	    }	    return -1;	}
-12:07:13 From Starta Institute 36 to Everyone:
-	public static void bubbleSort(int[] array) {
-	        boolean isSorted = false;
-	        int tmp;
-	        while (!isSorted) {
-	            isSorted = true;
-	            for (int i = 0; i < array.length - 1; i++) {
-	                if (array[i] > array[i + 1]) {
-	                    tmp = array[i];
-	                    array[i] = array[i + 1];
-	                    array[i + 1] = tmp;
-	                    isSorted = false;
-	                }
-	            }
-	        }
 	
+	    public void setName(String name) {
+	        this.name = name;
 	    }
-12:07:25 From Starta Institute 36 to Everyone:
-	int[] arr = {-1, 100, 9, 0, 5, 7};
-	        System.out.println(Arrays.toString(arr));
-	        bubbleSort(arr);
-	        System.out.println(Arrays.toString(arr));
-12:49:25 From Starta Institute 36 to Everyone:
-	public static void quickSort(int[] arr, int first, int last) {
-	        if (last <= first) {
-	            return;
+11:38:28 From Starta Institute 36 to Everyone:
+	public void setAge(int age) {
+	        if (age < 18 || age > 65) {
+	            System.out.println("ERROR!!! Incorrect age!");
+	        } else {
+	            this.age = age;
 	        }
-	        int pivot = partition(arr, first, last);
-	        quickSort(arr, first, pivot - 1);
-	        quickSort(arr, pivot + 1, last);
 	    }
-12:49:36 From Starta Institute 36 to Everyone:
-	public static int partition(int[] arr, int first, int last) {
-	        int pivot = last;
 	
-	        int counter = first;
-	        for (int i = first; i < last; i++) {
-	            if(arr[i] < arr[pivot]) {
-	                int tmp = arr[counter];
-	                arr[counter] = arr[i];
-	                arr[i] = tmp;
-	                counter++;
-	            }
-	        }
-	        int tmp = arr[pivot];
-	        arr[pivot] = arr[counter];
-	        arr[counter] = tmp;
-	
-	        return counter;
+	    public void setSalary(double salary) {
+	        this.salary = salary;
 	    }
-12:49:49 From Starta Institute 36 to Everyone:
-	int[] arr = {0, -10, 100, 2, 15};
-	        System.out.println(Arrays.toString(arr));
-	        quickSort(arr, 0, 4);
-	        System.out.println(Arrays.toString(arr));
+12:12:54 From Starta Institute 36 to Everyone:
+	Worker worker = new Worker(20);
+	        worker.setName("Aramis");
+	        worker.setAge(22);
+	//        System.out.println(worker.getName() + " " + worker.getAge() + " " + worker.getSalary());
+	//        worker.printInfo();
+	        System.out.println(worker.toString());
+	        System.out.println(worker.getClass());
