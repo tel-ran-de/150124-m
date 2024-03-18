@@ -1,0 +1,110 @@
+10:14:33 From Starta Institute 36 to Everyone:
+	<dependencies>
+	<dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter</artifactId>
+	<version>5.9.2</version>
+	<scope>test</scope>
+	</dependency>
+	</dependencies>
+10:17:58 From Starta Institute 36 to Everyone:
+	https://mvnrepository.com/
+10:23:15 From Starta Institute 36 to Everyone:
+	https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter/5.10.2
+10:41:44 From Starta Institute 36 to Everyone:
+	public static void main(String[] args) {
+	    int[] arr = getNumbers();
+	    System.out.println(Arrays.toString(arr));
+	}
+	
+	public static int[] getNumbers() {
+	    int[] arr = {1, 2, 3, 5};
+	    return arr;
+	}
+11:14:40 From Starta Institute 36 to Everyone:
+	@BeforeEach
+	    void init() {
+	//        arr = new int[]{1, 2, 3, 5};
+	        System.out.println("BeforeEach");
+	    }
+	
+	    @AfterEach
+	    void initAfter() {
+	        System.out.println("AfterEach");
+	    }
+	
+	    @BeforeAll
+	    static void beforeAll() {
+	        System.out.println("BeforeAll");
+	    }
+	
+	    @AfterAll
+	    static void afterAll() {
+	        System.out.println("AfterAll");
+	    }
+	
+	    @Test
+	    void getNumbersSuccessTest() {
+	        int[] arr = {1, 2, 3, 5};
+	        assertEquals(Arrays.toString(arr), Arrays.toString(Main.getNumbers()));
+	        System.out.println("Test 1");
+	    }
+	
+	    @Test
+	    void getNumbersFailTest() {
+	        int[] arr = {1, 2, 3, 6};
+	        assertNotEquals(Arrays.toString(arr), Arrays.toString(Main.getNumbers()));
+	        System.out.println("Test 2");
+	    }
+11:34:52 From Starta Institute 36 to Everyone:
+	@Test
+	    void getNumbersLengthSuccessTest() {
+	        assertEquals(4, Main.getNumbers().length);
+	//        assertTrue(4 == Main.getNumbers().length);
+	//        assertFalse(5 == Main.getNumbers().length);
+	    }
+11:40:14 From Starta Institute 36 to Everyone:
+	@Test
+	    void getNumbersSuccessTest() {
+	        int[] arr = {1, 2, 3, 5};
+	        assertEquals(Arrays.toString(arr), Arrays.toString(Main.getNumbers()));
+	        System.out.println("Test 1");
+	    }
+	
+	    @Test
+	    void getNumbersFailTest() {
+	        int[] arr = {1, 2, 3, 6};
+	        assertNotEquals(Arrays.toString(arr), Arrays.toString(Main.getNumbers()));
+	        System.out.println("Test 2");
+	    }
+	
+	    @Test
+	    void getNumbersLengthSuccessTest() {
+	        assertEquals(4, Main.getNumbers().length);
+	//        assertTrue(4 == Main.getNumbers().length);
+	//        assertFalse(5 == Main.getNumbers().length);
+	    }
+	
+	    @Test
+	    void getNumbersLengthFailTest() {
+	        assertFalse(5 == Main.getNumbers().length);
+	        assertFalse(3 == Main.getNumbers().length);
+	    }
+11:47:18 From Starta Institute 36 to Everyone:
+	Написать метод findMax(), который возвращает максимальное число из массива
+	Протестировать с помощью метода main()
+	Написать тесты используя библиотеку JUnit
+	тест, который проверяет пустой массив или нет
+	тест, который проверяет правильность поиска максимального значения
+11:56:44 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	@Test	    void findElementBigThanOthers() {		        TaskTwo taskTwo = new TaskTwo();	        assertEquals(0,taskTwo.findMax(array));	    }	    @Test	    void isArrayEmplty(){	        assertNotEquals(0,array);	    }
+11:57:43 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	public int findMax(int[] array){		        int tmp = array[0];	        for (int i = 0; i < array.length; i++) {	            if(array[i] > tmp){	                tmp = array[i];	            }	        }	        return tmp;	    }
+11:58:29 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	int[] array = new int[]{2,4,6,435,54,23};
+12:33:47 From Starta Institute 36 to Everyone:
+	public static int getElementByIndex (int[] arr, int index){
+	        return arr[index];
+	    }
+12:37:10 From Ramiz Alasgarov to Starta Institute 36(Direct Message):
+	@Test	    void returnTrueIndexInArray(){	        assertEquals(3,taskTwo.getElementByIndex(array,3));	    }	    @Test	    void returnFalseIndexInArray(){	        assertNotEquals(2,taskTwo.getElementByIndex(array,3));	    }
