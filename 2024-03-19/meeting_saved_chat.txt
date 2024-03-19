@@ -1,0 +1,68 @@
+09:31:42 From Starta Institute 36 to Everyone:
+	Реализовать простую лотерею, используя конструкцию if-else-if:
+	Создать класс для лотереи
+	В методе main() реализовать лотерею
+	Добавить переменные для выигрышных номеров (5 номеров)
+	Добавить переменные для номеров пользователя
+	Получить от пользователя 5 номеров, используем Сканер
+	Ограничить игровые номера от 1 до 50
+	Рандомально присвоить в переменные выигрышные номера
+	Распечатать на консоль номера лотереи и номера введенные пользователем
+09:41:00 From Ramiz Alasgarov to Everyone:
+	Реализовать простую лотерею, используя конструкцию if-else-if:	Создать класс для лотереи	В методе main() реализовать лотерею	Добавить переменные для выигрышных номеров (5 номеров)	Добавить переменные для номеров пользователя	Получить от пользователя 5 номеров, используем Сканер	Ограничить игровые номера от 1 до 50	Рандомально присвоить в переменные выигрышные номера	Распечатать на консоль номера лотереи и номера введенные пользователем
+09:41:01 From Starta Institute 36 to Everyone:
+	Реализовать простую лотерею, используя конструкцию if-else-if:
+	Создать класс для лотереи
+	В методе main() реализовать лотерею
+	Добавить переменные для выигрышных номеров (5 номеров)
+	Добавить переменные для номеров пользователя
+	Получить от пользователя 5 номеров, используем Сканер
+	Ограничить игровые номера от 1 до 50
+	Рандомально присвоить в переменные выигрышные номера
+	Распечатать на консоль номера лотереи и номера введенные пользователем
+09:45:55 From Ekaterina Beidel to Starta Institute 36(Direct Message):
+	Артем, доброе утро! Извиняюсь, мне нужно отойти на 20 минут.
+09:46:43 From Starta Institute 36 to Ekaterina Beidel(Direct Message):
+	Хорошо, без проблем. Спасибо.
+10:21:44 From Hanna Krzheminska to Everyone:
+	int luckyNum1 = 0;	int luckyNum2 = 0;	int luckyNum3 = 0;	int luckyNum4 = 0;	int luckyNum5 = 0;		int userNum1 = 0;	int userNum2 = 0;	int userNum3 = 0;	int userNum4 = 0;	int userNum5 = 0;		int setSize =5;	int luckyCount = 1;	int lucky = 0;		Random random = new Random();		Scanner scanner = new Scanner(System.in);	System.out.println("Введите первое число (от 1 до 50)");	userNum1 = scanner.nextInt();	System.out.println("Введите второе число (от 1 до 50)");	userNum2 = scanner.nextInt();	System.out.println("Введите третье число (от 1 до 50)");	userNum3 = scanner.nextInt();	System.out.println("Введите четвертое число (от 1 до 50)");	userNum4 = scanner.nextInt();	System.out.println("Введите пятое число (от 1 до 50)");	userNum5 = scanner.nextInt();
+10:22:18 From Hanna Krzheminska to Everyone:
+	if (!(userNum1 > 0 && userNum1 < 50 &&	        userNum2 > 0 && userNum2 < 50 &&	        userNum3 > 0 && userNum3 < 50 &&	        userNum4 > 0 && userNum4 < 50 &&	        userNum5 > 0 && userNum5 < 50)) {	    System.out.println("!!! введите число в диапазоне от 1 до 50 !!!");	} else {		    while (luckyCount<=setSize) {	        lucky = random.nextInt(50) +1;	        if (luckyCount==1) {	            luckyNum1=lucky;	            luckyCount++;	        } else   if (luckyCount==2) {	            luckyNum2=lucky;	            luckyCount++;	        } else   if (luckyCount==3) {	            luckyNum3=lucky;	            luckyCount++;	        } else   if (luckyCount==4) {	            luckyNum4=lucky;	            luckyCount++;	        } else  if (luckyCount==5) {	            luckyNum5=lucky;	            luckyCount++;	        }	    }
+10:22:30 From Hanna Krzheminska to Everyone:
+	System.out.println("введенные вами номера: "+userNum1+", "+userNum2+", "+userNum3+", "+userNum4+", "+userNum5+".");	        System.out.println("выиграшные номера: "+luckyNum1+","+luckyNum2+","+luckyNum3+","+luckyNum4+","+luckyNum5+".");	    }	}
+11:02:59 From Stefan Martianov to Everyone:
+	while (luckyCount<=setSize) {	                lucky = random.nextInt(50) +1;		                switch (luckyCount){	                    case 1:	                        luckyNum1=lucky;	                        luckyCount++;	                        break;	                    case 2:	                        luckyNum2=lucky;	                        luckyCount++;	                        break;	                    case 3:	                        luckyNum3=lucky;	                        luckyCount++;	                        break;	                    case 4:	                        luckyNum4=lucky;	                        luckyCount++;	                        break;	                    case 5:	                        luckyNum5=lucky;	                        luckyCount++;	                        break;	                    default:	                        System.out.println("default");	                }
+11:28:37 From Stefan Martianov to Everyone:
+	while (luckyCount<=setSize) {	                lucky = random.nextInt(50) +1;		                switch (luckyCount){	                    case 1:	                        luckyNum1=lucky;	                        luckyCount++;	                        break;	                    case 2:	                        if (luckyNum1 != lucky){	                            luckyNum2=lucky;	                            luckyCount++;	                        }	                        break;	                    case 3:	                        if (luckyNum2 != lucky && luckyNum1 != lucky){	                            luckyNum3=lucky;	                            luckyCount++;	                        }	                        break;
+11:28:52 From Stefan Martianov to Everyone:
+	case 4:	                        if (luckyNum2 != lucky && luckyNum1 != lucky && luckyNum3 != lucky){	                            luckyNum4=lucky;	                            luckyCount++;	                        }	                        break;	                    case 5:	                        if (luckyNum2 != lucky && luckyNum1 != lucky && luckyNum3 != lucky && luckyNum4 != lucky){	                            luckyNum5=lucky;	                            luckyCount++;	                        }	                        break;	                    default:	                        System.out.println("default");	                }
+11:40:18 From Starta Institute 36 to Everyone:
+	Изменить написанный код
+	Распределите ответственность написанного кода в соответствующие классы и методы
+	Сохраните номера лотереи в массиве 
+	Введите контроль за количеством номеров в лотереи и от пользователя
+	Создайте класс Константы, определите COUNT_SET_SIZE = 5 
+	Добавьте проверку пользовательских номеров с номерами лотереи
+	Реализуйте метод в классе Utils
+	Метод должен принимать два массива (lotteryNumber, userNumber)
+	Возвращать количество совпадений
+	Получите от пользователя 5 номеров, сохраните их в массив
+	Протестируйте работу лотереи в классе StartLottery
+	Выведите результаты на консоль
+12:43:38 From Artem Jantschenko to Everyone:
+	int userCount =1;	        int user =0;		         int []userNumbers = new int[setSize];	        Random random = new Random();			        Scanner scanner = new Scanner(System.in);	        System.out.println("Введите 5 номеров от 1 до 50:");	        //userNum1 = scanner.nextInt();	        while (userCount<=setSize){	            System.out.println("Введите номер " + userCount + ": ");	            user = scanner.nextInt();	            if (user>0 && user<=50 && !checkNumbers(userNumbers,user)){	                userNumbers[userCount-1]=user;	                ++userCount;	                //++userCount = userCount + 1 = userCount;	                //userCount++ = userCount = userCount + 1;	            }else {		                System.out.println("Номер должен быть от 1 до 50 или такой номер уже есть. Попробуйте еще раз! ");	//                userNum1 = new Scanner(System.in).nextInt();	            }	        }	        System.out.println(Arrays.toString(userNumbers));
+12:43:49 From Artem Jantschenko to Everyone:
+	public static boolean checkNumbers (int[]arr, int num ){	    for (int i = 0; i < arr.length; i++) {	        if (arr[i]==num){	            return true;	        }	    }	    return false;	}
+12:47:15 From Starta Institute 36 to Everyone:
+	Изменить написанный код
+	Распределите ответственность написанного кода в соответствующие классы и методы
+	Сохраните номера лотереи в массиве 
+	Введите контроль за количеством номеров в лотереи и от пользователя
+	Создайте класс Константы, определите COUNT_SET_SIZE = 5 
+	Добавьте проверку пользовательских номеров с номерами лотереи
+	Реализуйте метод в классе Utils
+	Метод должен принимать два массива (lotteryNumber, userNumber)
+	Возвращать количество совпадений
+	Получите от пользователя 5 номеров, сохраните их в массив
+	Протестируйте работу лотереи в классе StartLottery
+	Выведите результаты на консоль
