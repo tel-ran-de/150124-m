@@ -1,0 +1,55 @@
+09:31:48 From Starta Institute 36 to Everyone:
+	Изменить написанный код
+	Распределите ответственность написанного кода в соответствующие классы и методы
+	Сохраните номера лотереи в массиве 
+	Введите контроль за количеством номеров в лотереи и от пользователя
+	Создайте класс Константы, определите COUNT_SET_SIZE = 5 
+	Добавьте проверку пользовательских номеров с номерами лотереи
+	Реализуйте метод в классе Utils
+	Метод должен принимать два массива (lotteryNumber, userNumber)
+	Возвращать количество совпадений
+	Получите от пользователя 5 номеров, сохраните их в массив
+	Протестируйте работу лотереи в классе StartLottery
+	Выведите результаты на консоль
+09:35:38 From Ramiz Alasgarov to Everyone:
+	int setSize = 5;	        int userCount = 1;	        int user = 0;		        int[] userNumbers = new int[setSize];	        Random random = new Random();			        Scanner scanner = new Scanner(System.in);	        System.out.println("Введите 5 номеров от 1 до 50:");	        while (userCount <= setSize) {	            System.out.println("Введите номер " + userCount + ": ");	            user = scanner.nextInt();	            if (user > 0 && user <= 50 && !checkNumbers(userNumbers, user)) {	                userNumbers[userCount - 1] = user;	                ++userCount;		            } else {		                System.out.println("Номер должен быть от 1 до 50 или такой номер уже есть. Попробуйте еще раз! ");	//                userNum1 = new Scanner(System.in).nextInt();	            }	        }
+09:35:51 From Ramiz Alasgarov to Everyone:
+	System.out.println(Arrays.toString(userNumbers));	    }	    public static boolean checkNumbers (int[]arr, int num ){	        for (int i = 0; i < arr.length; i++) {	            if (arr[i]==num){	                return true;	            }	        }	        return false;
+09:50:53 From Ramiz Alasgarov to Everyone:
+	public static boolean checkNumbers (int[]arr, int num ){	        for (int i = 0; i < arr.length; i++) {	            if (arr[i]==num){	                return true;	            }	        }	        return false;	    }
+09:51:12 From Ramiz Alasgarov to Everyone:
+	public static void checkUserInput(){	        int[] userNumbers = new int[Constants.SET_SIZE_OF_ARRAY];	        int userCount = 1;	        int user = 0;	        Scanner scanner = new Scanner(System.in);	        System.out.println("Введите 5 номеров от 1 до 50:");	        while (userCount <= Constants.SET_SIZE_OF_ARRAY) {		            System.out.println("Введите номер " + userCount + ": ");	            user = scanner.nextInt();	            if (user > 0 && user <= 50 && !Utils.checkNumbers(userNumbers, user)) {	                userNumbers[userCount - 1] = user;	                ++userCount;		            } else {		                System.out.println("Номер должен быть от 1 до 50 или такой номер уже есть. Попробуйте еще раз! ");	//	            }	        }	    }
+09:51:29 From Ramiz Alasgarov to Everyone:
+	public static final int SET_SIZE_OF_ARRAY = 5;
+09:51:41 From Ramiz Alasgarov to Everyone:
+	int[] userNumbers = new int[Constants.SET_SIZE_OF_ARRAY];											        System.out.println(Arrays.toString(userNumbers));
+10:02:26 From Hanna Krzheminska to Everyone:
+	Random random = new Random();		while (luckyCount <= setSize) {	    lucky = random.nextInt(50) + 1;		    switch (luckyCount) {	        case 1:	            luckyNum1 = lucky;	            luckyCount++;	            break;	        case 2:	            if (luckyNum1 != lucky) {	                luckyNum2 = lucky;	                luckyCount++;	            }	            break;	        case 3:	            if (luckyNum1 != lucky && luckyNum2 != lucky) {	                luckyNum3 = lucky;	                luckyCount++;	            }	            break;
+10:02:38 From Hanna Krzheminska to Everyone:
+	case 4:	            if (luckyNum1 != lucky && luckyNum2 != lucky && luckyNum3 != lucky) {	                luckyNum4 = lucky;	                luckyCount++;	            }	            break;	        case 5:	            if (luckyNum1 != lucky && luckyNum2 != lucky && luckyNum3 != lucky && luckyNum4 != lucky) {	                luckyNum5 = lucky;	                luckyCount++;	            }	            break;	        default:	            System.out.println("default");	    }		}
+10:20:02 From Starta Institute 36 to Everyone:
+	unique
+10:35:19 From Ramiz Alasgarov to Everyone:
+	public static void getLuckyNumbers() {	        Random random = new Random();	        int luckyNumberIndex = 1;	        int luckyCurrentNumber = 0;		        while (luckyNumberIndex <= Constants.SET_SIZE_OF_ARRAY) {	            luckyCurrentNumber = random.nextInt(50) + 1;	                if(isUniqueNumber(luckyNumbers,luckyCurrentNumber)){	                    luckyNumbers[luckyNumberIndex-1] = luckyCurrentNumber;	                    ++luckyNumberIndex;	                }	        }	    }
+10:35:31 From Ramiz Alasgarov to Everyone:
+	public static void getUserNumbers(){		        int userNumberIndex = 1;	        int userCurrentNumber = 0;	        Scanner scanner = new Scanner(System.in);	        System.out.println("Введите 5 номеров от 1 до 50:");	        while (userNumberIndex <= Constants.SET_SIZE_OF_ARRAY) {		            System.out.println("Введите номер " + userNumberIndex + ": ");	            userCurrentNumber = scanner.nextInt();	            if (userCurrentNumber > 0 && userCurrentNumber <= 50 && Utils.isUniqueNumber(userNumbers, userCurrentNumber)) {	                userNumbers[userNumberIndex - 1] = userCurrentNumber;	                ++userNumberIndex;		            } else {		                System.out.println("Номер должен быть от 1 до 50 или такой номер уже есть. Попробуйте еще раз! ");	            }	        }	        System.out.println(Arrays.toString(userNumbers));	    }
+10:35:38 From Ramiz Alasgarov to Everyone:
+	public static boolean isUniqueNumber(int[]arr, int num ){	        for (int i = 0; i < arr.length; i++) {	            if (arr[i]==num){	                return false;	            }	        }	        return true;	    }
+10:49:54 From Anna Kanivets to Everyone:
+	trigger
+11:24:18 From Ramiz Alasgarov to Everyone:
+	public void runLottery() {	        int[] userNumbers = Utils.getUserNumbers();	        int[] luckyNumbers = Utils.getLuckyNumbers();	        Utils.printArray(userNumbers);	        Utils.printArray(luckyNumbers);	    }
+11:24:28 From Ramiz Alasgarov to Everyone:
+	Lottery lottery = new Lottery();	        lottery.runLottery();
+11:51:00 From Ramiz Alasgarov to Everyone:
+	public static int[] getWinNumbers(int[] humanArray,int[] randomArray){	        int index = 0;	        int[] winnerNumbers = new int[Constants.SET_SIZE_OF_ARRAY];	        for (int i = 0; i < humanArray.length; i++) {	            for (int j = 0; j < randomArray.length; j++) {	                if(humanArray[i] == randomArray[j]){	                    winnerNumbers[index] = humanArray[i];	                    index++;	                    break;	                }	            }	        }	        return winnerNumbers;	    }
+11:52:34 From Anna Kanivets to Everyone:
+	winner numbers are
+11:53:17 From Ramiz Alasgarov to Everyone:
+	int[] userNumbers = Utils.getUserNumbers();	        int[] luckyNumbers = Utils.getLuckyNumbers();	        Utils.printArray(userNumbers);	        Utils.printArray(luckyNumbers);	        System.out.println("winner numbers is");	        Utils.printArray(Utils.getWinNumbers(userNumbers,luckyNumbers));
+11:56:57 From Anna Kanivets to Everyone:
+	item
+11:56:59 From Starta Institute 36 to Everyone:
+	item
+12:00:27 From Anna Kanivets to Everyone:
+	no winning numbers
